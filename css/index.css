@@ -1,0 +1,63 @@
+*{
+	margin: 0;padding: 0;list-style: none;
+}
+#banner{
+	width: 528px;height: 280px;margin: 200px auto;perspective: 800px;
+}
+#banner ul li{
+	width: 130px;height: 280px;float: left;position: relative;
+	transform-style: preserve-3d;transition: 1s;transform: rotateZ(-140px);
+}
+#banner ul li div{
+	width: 130px;height: 280px;position: absolute;
+}
+/*找到上面移动*/
+#banner ul li div:nth-child(1){
+	bottom: 280px;transform-origin: bottom; transform:translateZ(140px) rotateX(90deg);
+	background-image: url(../img/1481558753697.jpg);
+}
+/*找到下边*/
+#banner ul li div:nth-child(2){
+	top: 280px;transform-origin: top; transform:translateZ(140px) rotateX(-90deg);
+	background-image: url(../img/1481558744269.jpg);
+}
+/*左右两边移动*/
+#banner ul li div:nth-child(5){
+	right: 130px;transform-origin: right; transform:translateZ(140px) rotateY(-90deg);
+}
+#banner ul li div:nth-child(6){
+	left: 130px;transform-origin: left; transform:translateZ(140px) rotateY(90deg);
+}
+/*找到前面*/
+#banner ul li div:nth-child(3){
+	transform:translateZ(140px);background-image: url(../img/mhn.jpg);
+})
+#banner ul li div:nth-child(4){
+	transform:translateZ(-140px) rotateX(180deg);background-image: url(../img/mnv.jpg);
+}
+/*找到后面向后移动一个宽度*/
+/*找到左右两边改宽度*/
+#banner ul li div:nth-child(5),#banner ul li div:nth-child(6){
+	width: 280px;
+}
+
+#banner ul li:nth-child(1) div{
+	background-position: 0px;
+}
+#banner ul li:nth-child(2) div{
+	background-position: -130px;
+}
+#banner ul li:nth-child(3) div{
+	background-position: -260px;
+}
+#banner ul li:nth-child(4) div{
+	background-position: -390px;
+}
+
+
+#banner:hover ul li {
+	transform: rotateX(90deg);
+}
+#banner ul li:nth-child(4){
+	z-index: -1;
+}
